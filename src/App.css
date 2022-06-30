@@ -1,38 +1,203 @@
+*{
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
 .App {
   text-align: center;
+  width: 100%;
+  height: 580px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.video{
+ width:100%;
+ height: 100%;
+ object-fit:cover;
+ position: absolute;
+left: 0px;
+top: 0px;
+
+}
+.navbar{
+  position: absolute;
+  height: 80px;
+left:0px;
+top: 4px;
+background-color: 
+rgba(72, 87, 118, 0.2);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 8px; 
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+.navbar-menu{
+  position: absolute;
+  height: 80px;
+left:0px;
+top: 4px;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 8px; 
+
+}
+.navbar--logo1{
+  margin-left: 40px;
+  margin-right: auto;
+cursor: pointer;
+z-index: 3;
+
+}
+.navbar--menu{
+  margin-right: 40px;
+  padding: 20px;
+  cursor: pointer;
+z-index: 3;
+}
+.main{
+  position: absolute;
+  top: 0px;
+
+  width: 100%;
+  height: 100%;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ 
+}
+.text1{
+  color: white;
+font-size: 40px;
+margin-top: 150px;
+}
+.text2{
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
+  margin-top: 10px;
   }
+.line{
+  margin-top: 10px;
+    border-style: solid;
+    border-color: #8493AD;
+    width: 120%;
+    height: 0.1px;
+    border-width: 0.5px;
+  }
+.text3{
+  margin-top: 40px;
+width: 40%;
+    color: #DAE1EE;
+    font-size: 16px;
+    font-weight: 400;
+    }
+
+
+.btn-container{
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+.btn-image{
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu-visible{
+  position:absolute;
+  right: 0px;
+  top: 84px;
+  width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
+  margin: 0px;
+  background-color:white;
+  opacity: 1;
+z-index: 2;
+}
+.menu-unvisible{
+  opacity: 0;
+}
+.menu-image{
+  position:absolute;
+  top: 15px;
+  left: 15px;
+}
+.menu-off{
+  position:absolute;
+  top: 15px;
+ right: 15px;
+}
+.accordion-container {
+  background: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+}
+.accordion-list {
+  font-size: 20px;
+  font-weight: bold;
+  background: white;
+  width: 100%;
+  color: black;
+  cursor: pointer;
+  border: 1px solid #dfdfdf;
+  display: flex;
+flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 24px;
+  z-index: 2;
+}
+.accordion-list img {
+  width: 20px;
+  transform: rotate(-90deg);
+  transition: transform 0.2s ease-in-out;
+  margin-left: auto;
+}
+.accordion-list img.active {
+  transform: rotate(0deg)
+}
+.accordion-toggle {
+  height: 0px;
+  font-size: 18px;
+  opacity: 0;
+  transition:  
+  opacity 0.3s ease-in-out,
+  height 0.3s 0.3s ease-in-out;
+  color: #333;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.animated {
+  opacity: 1;
+  transition:  
+  height 0.3s ease-in-out,
+  opacity 0.3s 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.accordion-toggle p {
+  margin: 0;
+  padding: 22px 15px;
+  pointer-events: none;
+  line-height: 1.3;
+}
+
+
+.accordion--flexOption {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  color: #555;
+  margin-left: 30px;
+
 }
