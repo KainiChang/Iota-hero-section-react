@@ -153,6 +153,7 @@ flex-direction: row;
   align-items: center;
   padding: 24px;
   z-index: 2;
+
 }
 .accordion-list img {
   width: 20px;
@@ -175,6 +176,8 @@ flex-direction: row;
   border-bottom-right-radius: 3px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+
 }
 
 .animated {
@@ -182,6 +185,8 @@ flex-direction: row;
   transition:  
   height 0.3s ease-in-out,
   opacity 0.3s 0.3s ease-in-out;
+  overflow: hidden;
+
 }
 
 .accordion-toggle p {
